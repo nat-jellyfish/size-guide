@@ -1,38 +1,20 @@
-import {nextui} from '@nextui-org/theme';
-import type { Config } from 'tailwindcss';
+import type { Config } from "tailwindcss";
 
-const config: Config = {
+export default {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
-    "./node_modules/@nextui-org/theme/dist/components/radio.js"
   ],
   theme: {
     extend: {
-      gridTemplateColumns: {
-        '13': 'repeat(13, minmax(0, 1fr))',
-      },
       colors: {
-        blue: {
-          400: '#2589FE',
-          500: '#0070F3',
-          600: '#2F6FEB',
-        },
         pink: {
           300: '#ffdcf6',
           400: '#e45eb0',
         }
       },
     },
-    keyframes: {
-      shimmer: {
-        '100%': {
-          transform: 'translateX(100%)',
-        },
-      },
-    },
   },
-  plugins: [require('@tailwindcss/forms'),nextui()],
-};
-export default config;
+  plugins: [require('@tailwindcss/forms')],
+} satisfies Config;

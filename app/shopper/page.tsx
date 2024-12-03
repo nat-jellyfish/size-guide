@@ -1,5 +1,5 @@
 import Form from "next/form";
-import { RadioGroup, Radio } from "@nextui-org/radio";
+// import { RadioGroup, Radio } from "@nextui-org/react";
 import { Button } from "../ui/button";
 
 export default function Page() {
@@ -16,17 +16,17 @@ export default function Page() {
         </div>
         <div className="flex flex-col">
           <label>Height</label>
-          <RadioGroup orientation="horizontal">
+          {/* <RadioGroup orientation="horizontal">
             <Radio value="inch">Inch</Radio>
             <Radio value="cm">Cm</Radio>
-          </RadioGroup>
+          </RadioGroup> */}
           <input type="text" />
         </div>
         <div>
-          <RadioGroup orientation="horizontal">
+          {/* <RadioGroup orientation="horizontal">
             <Radio value="female" >Female</Radio>
             <Radio value="male">Male</Radio>
-          </RadioGroup>
+          </RadioGroup> */}
         </div>
         <div className="flex justify-center">
         <Button>Scan Now</Button>
