@@ -7,8 +7,7 @@ import { lusitana } from "@/app/ui/fonts";
 import Image from "next/image";
 import { useEffect } from 'react'
 import * as THREE from 'three';
-import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
-import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+
 import { ARButton } from 'three/examples/jsm/webxr/ARButton.js';
 import { BufferGeometryUtils  } from 'three/examples/jsm/utils/BufferGeometryUtils.js';
 
