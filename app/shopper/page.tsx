@@ -1,6 +1,7 @@
 import Form from "next/form";
-// import { RadioGroup, Radio } from "@nextui-org/react";
+import { ArrowRightIcon } from "@heroicons/react/24/outline";
 import { Button } from "../ui/button";
+import Link from "next/link";
 
 export default function Page() {
   return (
@@ -29,7 +30,13 @@ export default function Page() {
           </RadioGroup> */}
         </div>
         <div className="flex justify-center">
-        <Button>Scan Now</Button>
+        
+        <Link
+            href="/shopper/ar"
+            className="flex items-center gap-5 self-start rounded-lg bg-pink-400 px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-pink-500 md:text-base"
+          >
+            <span>Scan Now</span> <ArrowRightIcon className="w-5 md:w-6" />
+          </Link>
         </div>
       </div>
     </Form>
