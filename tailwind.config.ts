@@ -1,10 +1,12 @@
+import {nextui} from '@nextui-org/theme';
 import type { Config } from 'tailwindcss';
 
 const config: Config = {
   content: [
-    './pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './components/**/*.{js,ts,jsx,tsx,mdx}',
-    './app/**/*.{js,ts,jsx,tsx,mdx}',
+    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./node_modules/@nextui-org/theme/dist/components/radio.js"
   ],
   theme: {
     extend: {
@@ -17,6 +19,10 @@ const config: Config = {
           500: '#0070F3',
           600: '#2F6FEB',
         },
+        pink: {
+          300: '#ffdcf6',
+          400: '#e45eb0',
+        }
       },
     },
     keyframes: {
@@ -27,6 +33,6 @@ const config: Config = {
       },
     },
   },
-  plugins: [require('@tailwindcss/forms')],
+  plugins: [require('@tailwindcss/forms'),nextui()],
 };
 export default config;
