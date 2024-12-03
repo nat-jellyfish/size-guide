@@ -15,3 +15,8 @@ Using the shopper’s camera, we can capture the measurements in real time from 
 Sellers can upload clothing items and varies sizes which will be used to select the optimal shopper’s fit. 
 
 [Live Demo](https://sizeguide-dzg3d0hwgje6cfae.eastus2-01.azurewebsites.net)
+
+## Appendix
+- [Next.js](https://nextjs.org/learn/dashboard-app/getting-started)
+- [Deploying a Next.js 14 App to Azure App Service Using GitHub Actions](https://medium.com/@dileepa.mabulage/deploying-a-next-js-14-app-to-azure-app-service-using-github-actions-f5119a56e9f4)
+- [pnpm with GitHub Actions](https://pnpm.io/continuous-integration#github-actions)
