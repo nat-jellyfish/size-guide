@@ -13,3 +13,5 @@ Create an augmented reality app that gives e- commerce shoppers size recommendat
 Using the shopper’s camera, we can capture the measurements in real time from the customer’s body. 
 
 Sellers can upload clothing items and varies sizes which will be used to select the optimal shopper’s fit. 
+
+[Live Demo](https://sizeguide-dzg3d0hwgje6cfae.eastus2-01.azurewebsites.net)
