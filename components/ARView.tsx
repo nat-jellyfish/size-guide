@@ -11,9 +11,12 @@ const ARView: React.FC = () => {
   const [distance, setDistance] = useState<number | null>(null);
 
   useEffect(() => {
-    if (canvasRef.current) {
-      initAR();
-    }
+    if (typeof self !== 'undefined') {
+        if (canvasRef.current) {
+            initAR();
+          }
+      }
+    
   }, []);
 
   const initAR = () => {
