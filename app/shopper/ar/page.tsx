@@ -2,16 +2,15 @@
 import dynamic from 'next/dynamic';
 
 
-const ARView = dynamic(
-    () => import('@/components/ARView'),
+const ARMeasure = dynamic(
+    () => import('@/components/ARMeasure'),
     { ssr: false } // This will prevent the component from rendering server-side
   );
   
   export default function Page() {
     return (
       <div>
-         <h1>AR Measurement App</h1>
-        <ARView />
+        <ARMeasure />
       </div>
     );
   }

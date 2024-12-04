@@ -4,7 +4,6 @@
 
 import React, { useEffect, useRef, useState } from 'react';
 import * as THREE from 'three';
-import 'aframe/dist/aframe-master.min.js';
 
 const ARView: React.FC = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -40,8 +39,8 @@ const ARView: React.FC = () => {
     marker1.add(cube1);
     marker2.add(cube2);
 
-    scene.add(marker1);
-    scene.add(marker2);
+    // scene.add(marker1);
+    // scene.add(marker2);
 
     // Set positions of the two markers
     marker1.position.set(0, 0, -5); // Example position for marker1
@@ -69,9 +68,9 @@ const ARView: React.FC = () => {
   return (
     <div>
       <canvas ref={canvasRef} />
-      <div>
+      {/* <div>
         <h2>Measured Distance: {distance ? `${distance.toFixed(2)} meters` : 'Calculating...'}</h2>
-      </div>
+      </div> */}
     </div>
   );
 };
