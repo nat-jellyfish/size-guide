@@ -340,7 +340,8 @@ const ARMeasure: React.FC = () => {
   const router = useRouter();
 
   const handleClick = () => {
-    router.push('/shopper/seller').then(() => router.reload());
+    router.push('/shopper/seller');
+    router.refresh();
   };
 
   return (
