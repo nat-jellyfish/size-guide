@@ -354,7 +354,7 @@ const ARMeasure: React.FC = () => {
     </div>
     <Link onClick={handleClick}
             href="/shopper/seller"
-            className="sticky top-full rounded-lg bg-pink-400 px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-pink-500 md:text-base"
+            className="sticky top-200 rounded-lg bg-pink-400 px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-pink-500 md:text-base"
           >
             <span>Finish</span>
           </Link>
