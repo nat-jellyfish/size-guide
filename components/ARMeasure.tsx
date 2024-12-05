@@ -4,6 +4,12 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Matrix4 } from "three";
 
+declare global {
+  interface Window {
+      arToolkitContext:any;
+  }
+}
+
 const ARMeasure: React.FC = () => {
   const [cameraInitialized, setCameraInitialized] = useState(false);
   const sceneRef = useRef<HTMLDivElement>(null);
