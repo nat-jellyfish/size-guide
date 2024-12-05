@@ -76,3 +76,15 @@ input[type='number']::-webkit-outer-spin-button {
     -webkit-transform: scaleY(1.0);
   }
 }
+
+.checkmark {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: block;
+  stroke-width: 2;
+  stroke: green;
+  stroke-miterlimit: 10;
+  stroke-dashoffset: 0;
+  margin: 10% auto;
+}

@@ -60,9 +60,7 @@ export default function Page() {
         </td>
         <td className="p-4 border-b border-slate-200 py-5">
           <button type="button" className="text-slate-500 hover:text-slate-700">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" className="w-6 h-6">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-            </svg>
+          <svg className="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><path className="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/></svg>
           </button>
         </td>
       </tr>
@@ -74,16 +72,16 @@ export default function Page() {
           <p className="block font-semibold text-sm text-slate-800">Cropped Check Cotton Shirt</p>
         </td>
         <td className="p-4 border-b border-slate-200 py-5">
-          <p className="text-sm text-slate-500">02</p>
+          <p className="text-sm text-slate-500">05</p>
         </td>
         <td className="p-4 border-b border-slate-200 py-5">
-          <p className="text-sm text-slate-500">30</p>
+          <p className="text-sm text-slate-500">40</p>
         </td>
         <td className="p-4 border-b border-slate-200 py-5">
-          <p className="text-sm text-slate-500">23.5</p>
+          <p className="text-sm text-slate-500">34</p>
         </td>
         <td className="p-4 border-b border-slate-200 py-5">
-          <p className="text-sm text-slate-500">33</p>
+          <p className="text-sm text-slate-500">43</p>
         </td>
         <td className="p-4 border-b border-slate-200 py-5">
           <button type="button" className="text-slate-500 hover:text-slate-700">
@@ -114,9 +112,7 @@ export default function Page() {
         </td>
         <td className="p-4 border-b border-slate-200 py-5">
           <button type="button" className="text-slate-500 hover:text-slate-700">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" className="w-6 h-6">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-            </svg>
+          <svg className="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><path className="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/></svg>
           </button>
         </td>
       </tr>
