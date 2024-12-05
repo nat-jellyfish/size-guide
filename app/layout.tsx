@@ -18,6 +18,7 @@ export default function RootLayout({
         <div id="ar-container">
           {/* Load external scripts */}
           {/* Load Three.js first */}
+
           <Script
             strategy="afterInteractive"
             src="https://cdn.jsdelivr.net/npm/three@0.136.0/build/three.min.js"
@@ -25,12 +26,9 @@ export default function RootLayout({
           {/* Load AR.js after Three.js */}
           <Script
             strategy="afterInteractive"
-            src="https://cdn.jsdelivr.net/gh/jeromeetienne/AR.js/aframe/build/aframe.min.js"
+            src="https://raw.githack.com/AR-js-org/AR.js/master/three.js/build/ar-threex.js"
           />
-          <Script
-            strategy="afterInteractive"
-            src="https://cdn.jsdelivr.net/gh/jeromeetienne/AR.js/aframe/build/ar.js"
-          />
+          
         </div>
 
         {children}
