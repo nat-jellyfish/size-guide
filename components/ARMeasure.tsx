@@ -5,6 +5,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { Matrix4 } from "three";
 import { ArrowRightIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
+import { useRouter } from 'next/navigation';
 
 declare global {
   interface Window {
@@ -13,8 +14,6 @@ declare global {
 }
 
 const ARMeasure: React.FC = () => {
-  const [cameraInitialized, setCameraInitialized] = useState(false);
-  const sceneRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (typeof window !== "undefined" && window.THREE && window.THREEx) {
@@ -211,7 +210,7 @@ const ARMeasure: React.FC = () => {
 
         // update container.visible and scanningSpinner visibility
         onRenderFcts.push(function () {
-          if (markerRoot1 != undefined && markerRoot2 != undefined) {
+          if (markerRoot1  && markerRoot2 ) {
             if (markerRoot1.visible === true && markerRoot2.visible === true) {
               container.visible = true;
               document.querySelector(".scanningSpinner").style.display = "none";
@@ -244,7 +243,7 @@ const ARMeasure: React.FC = () => {
 
         // update lineMesh
         onRenderFcts.push(function () {
-          if (markerRoot1 != undefined && markerRoot2 != undefined) {
+          if (markerRoot1 && markerRoot2) {
             var geometry = lineMesh.geometry;
             vertices = [
               markerRoot1.position.x,
@@ -338,19 +337,25 @@ const ARMeasure: React.FC = () => {
     }
   }, []);
 
+  const router = useRouter();
+
+  const handleClick = () => {
+    router.push('/seller').then(() => router.reload());
+  };
+
   return (
-    <div>
+    <div className="min-h-screen">
     <div className="scanningSpinner">
       <label>Scanning</label>
       <div className="rect1"></div>
       <div className="rect2"></div>
       <div className="rect3"></div>
     </div>
-    <Link
-            href="/shopper"
-            className="flex items-center gap-5 self-start rounded-lg bg-pink-400 px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-pink-500 md:text-base"
+    <Link onClick={handleClick}
+            href="/seller"
+            className="sticky top-full rounded-lg bg-pink-400 px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-pink-500 md:text-base"
           >
-            <span>Finish</span> <ArrowRightIcon className="w-5 md:w-6" />
+            <span>Finish</span>
           </Link>
     </div>
   );
