@@ -6,7 +6,7 @@ import { Matrix4 } from "three";
 
 declare global {
   interface Window {
-      arToolkitContext:any;
+    arToolkitContext: any;
   }
 }
 
@@ -16,7 +16,7 @@ const ARMeasure: React.FC = () => {
 
   useEffect(() => {
     if (typeof window !== "undefined" && window.THREE && window.THREEx) {
-      THREEx.ArToolkitContext.baseURL = '../'
+      THREEx.ArToolkitContext.baseURL = "../";
       // init renderer
       var renderer = new THREE.WebGLRenderer({
         antialias: true,
@@ -126,7 +126,7 @@ const ARMeasure: React.FC = () => {
           markerRoot1,
           {
             type: "pattern",
-            patternUrl: THREEx.ArToolkitContext.baseURL + "/patt.hiro",
+            patternUrl: THREEx.ArToolkitContext.baseURL + "/patt.kanji",
             // patternUrl : THREEx.ArToolkitContext.baseURL + '../data/data/patt.kanji',
           }
         );
@@ -137,7 +137,7 @@ const ARMeasure: React.FC = () => {
           {
             type: "pattern",
             // patternUrl : THREEx.ArToolkitContext.baseURL + '../data/data/patt.hiro',
-            patternUrl: THREEx.ArToolkitContext.baseURL + "/patt.kanji",
+            patternUrl: THREEx.ArToolkitContext.baseURL + "/patt.hiro",
           }
         );
       }
@@ -209,17 +209,14 @@ const ARMeasure: React.FC = () => {
 
         // update container.visible and scanningSpinner visibility
         onRenderFcts.push(function () {
-          if (
-            markerRoot1 != undefined &&
-            markerRoot2 != undefined &&
-            markerRoot1.visible === true &&
-            markerRoot2.visible === true
-          ) {
-            container.visible = true;
-            document.querySelector(".scanningSpinner").style.display = "none";
-          } else {
-            container.visible = false;
-            document.querySelector(".scanningSpinner").style.display = "";
+          if (markerRoot1 != undefined && markerRoot2 != undefined) {
+            if (markerRoot1.visible === true && markerRoot2.visible === true) {
+              container.visible = true;
+              document.querySelector(".scanningSpinner").style.display = "none";
+            } else {
+              container.visible = false;
+              document.querySelector(".scanningSpinner").style.display = "";
+            }
           }
         });
 
@@ -341,13 +338,11 @@ const ARMeasure: React.FC = () => {
 
   return (
     <div className="scanningSpinner">
-		<label>
-			Scanning
-		</label>
-		<div className="rect1"></div>
-		<div className="rect2"></div>
-		<div className="rect3"></div>
-	</div>
+      <label>Scanning</label>
+      <div className="rect1"></div>
+      <div className="rect2"></div>
+      <div className="rect3"></div>
+    </div>
   );
 };
 
