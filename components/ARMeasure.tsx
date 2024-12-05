@@ -3,6 +3,8 @@
 
 import React, { useEffect, useRef, useState } from "react";
 import { Matrix4 } from "three";
+import { ArrowRightIcon } from "@heroicons/react/24/outline";
+import Link from "next/link";
 
 declare global {
   interface Window {
@@ -24,7 +26,7 @@ const ARMeasure: React.FC = () => {
       });
       renderer.setClearColor(new THREE.Color("lightgrey"), 0);
       renderer.setSize(640, 480);
-      renderer.domElement.style.position = "absolute";
+      renderer.domElement.style.position = "relative";
       renderer.domElement.style.top = "0px";
       renderer.domElement.style.left = "0px";
       document.body.appendChild(renderer.domElement);
@@ -337,11 +339,19 @@ const ARMeasure: React.FC = () => {
   }, []);
 
   return (
+    <div>
     <div className="scanningSpinner">
       <label>Scanning</label>
       <div className="rect1"></div>
       <div className="rect2"></div>
       <div className="rect3"></div>
+    </div>
+    <Link
+            href="/shopper"
+            className="flex items-center gap-5 self-start rounded-lg bg-pink-400 px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-pink-500 md:text-base"
+          >
+            <span>Finish</span> <ArrowRightIcon className="w-5 md:w-6" />
+          </Link>
     </div>
   );
 };
