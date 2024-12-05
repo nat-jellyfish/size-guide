@@ -341,7 +341,7 @@ const ARMeasure: React.FC = () => {
 
   const handleClick = () => {
     router.push('/shopper/seller');
-    router.refresh();
+   
   };
 
   return (
@@ -354,7 +354,7 @@ const ARMeasure: React.FC = () => {
     </div>
     <Link onClick={handleClick}
             href="/shopper/seller"
-            className="sticky top-200 rounded-lg bg-pink-400 px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-pink-500 md:text-base"
+            className="absolute top-200 z-0 rounded-lg bg-pink-400 px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-pink-500 md:text-base"
           >
             <span>Finish</span>
           </Link>
